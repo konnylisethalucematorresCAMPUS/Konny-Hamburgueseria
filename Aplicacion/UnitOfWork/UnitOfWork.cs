@@ -20,11 +20,18 @@ namespace Aplicacion.UnitOfWork;
         
         public IRol Roles => _Rol ??= new RolRepository(_Context!);
         public IUsuario Usuarios => _Usuario ??= new UsuarioRepository(_Context!);
+/////////////////////////////////////////////////////////////////////////////////faltan configurar
+    public ICategoria Categorias => throw new NotImplementedException();
 
+    public IChef Chefs => throw new NotImplementedException();
 
+    public IHamburguesa Hamburguesas => throw new NotImplementedException();
 
+    public IHamburguesaIngrediente IHamburguesasIngredientes => throw new NotImplementedException();
 
-        public void Dispose(){
+    public IIngrediente Ingredientes => throw new NotImplementedException();
+
+    public void Dispose(){
             _Context!.Dispose();
             GC.SuppressFinalize(this); 
         }

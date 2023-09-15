@@ -7,5 +7,5 @@ namespace API.Services;
         Task<DataUserDto> GetTokenAsync(LoginDto model);
         Task<string> AddRoleAsync(AddRoleDto model);
         Task<DataUserDto> RefreshTokenAsync(string refreshToken);
-        
-    }
+    Task RegisterAsync(RegistrarIngredienteDto model);
+}
